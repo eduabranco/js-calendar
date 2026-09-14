@@ -5,16 +5,29 @@
 // Calendar class
 class Calendar {
     fieldVal = 10
-
+    /** 
+     * 
+     * @param {int} y
+     * @param {int} m
+     * @param {int} d
+     */
     // Constructor
-    constructor() {
+    constructor(y, m, d) {
         // Initialize the calendar
-        this.now = new Date()
+        if (y === undefined || m === undefined || d === undefined) {
+            this.now = new Date()
+        }
+        this.now = new Date(y, m - 1, d)
+
     // this : このインスタンス
     //　イベント呼び出しの場合、イベントが発生したオブジェクトを示す
     }
-        @return {string} // The current date in YYYY/MM/DD format
+    /**
+     * Print the current date.
+     * @return {string} 
+     */
     // Print the current date
+
     print() {
         //let d = new Date()
         //console.log(d)
