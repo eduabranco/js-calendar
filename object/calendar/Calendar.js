@@ -27,16 +27,25 @@ class Calendar {
     }
     /**
      * Print the current date.
+     * 
+     * @param (int) pad true:0　パディングを行う、false：「０」パディングを行わない
+     * 
      * @return {string} 
      */
     // Print the current date
 
-    print() {
-        //let d = new Date()
+    print(pad) {
+        //let d = new Date()　
         //console.log(d)
+        if (pad) {
+            padChara="0"
+        }else{
+            padChara=""
+        }
+
         let result = this.now.getFullYear()
-        result += "/"+(this.now.getMonth()+1)
-        result += "/"+this.now.getDate()
+        result += "/"+ String((this.now.getMonth()+1)).padStart(2, padChara)
+        result += "/"+ String(this.now.getDate()).padStart(2, padChara)
         console.log(result)
         return result
     }
