@@ -4,6 +4,5 @@
 
 // Calendar class
 class Calendar {
-  constructor() {
-    this.events = [];
-  }
+    
+}
