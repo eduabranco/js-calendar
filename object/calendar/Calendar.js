@@ -34,19 +34,22 @@ class Calendar {
      */
     // Print the current date
 
-    print(pad) {
+    print(pad='') {
         //let d = new Date()　
         //console.log(d)
-        let padChara
-        if (pad) {
-            padChara="0"
-        }else{
-            padChara=""
-        }
+        //let padChara
+        //if (pad) {
+        //    padChara="0"
+        //}else{
+        //    padChara=""
+        //}
 
         let result = this.now.getFullYear()
-        result += "/"+ String((this.now.getMonth()+1)).padStart(2, padChara)
-        result += "/"+ String(this.now.getDate()).padStart(2, padChara)
+        //result += "/"+ String((this.now.getMonth()+1)).padStart(2, padChara)
+        //result += "/"+ String(this.now.getDate()).padStart(2, padChara)
+        result += "/"+ String((this.now.getMonth()+1)).padStart(2, pad)
+        result += "/"+ String(this.now.getDate()).padStart(2, pad)
+        
         console.log(result)
         return result
     }
