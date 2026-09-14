@@ -1,5 +1,7 @@
 "use strict"
 
+// semicolons are optional in JavaScript, but it is a good practice to use them to avoid potential issues with automatic semicolon insertion (ASI).
+
 // object/calendar/Calendar.js
 
 // Calendar class
