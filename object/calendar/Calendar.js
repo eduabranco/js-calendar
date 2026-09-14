@@ -28,7 +28,7 @@ class Calendar {
     /**
      * Print the current date.
      * 
-     * @param (int) pad true:0　パディングを行う、false：「０」パディングを行わない
+     * @param {boolean} pad true:0　パディングを行う、false：「０」パディングを行わない
      * 
      * @return {string} 
      */
@@ -37,6 +37,7 @@ class Calendar {
     print(pad) {
         //let d = new Date()　
         //console.log(d)
+        let padChara
         if (pad) {
             padChara="0"
         }else{
