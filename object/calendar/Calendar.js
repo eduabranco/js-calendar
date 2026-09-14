@@ -16,8 +16,9 @@ class Calendar {
         // Initialize the calendar
         if (y === undefined || m === undefined || d === undefined) {
             this.now = new Date()
+        }else{
+            this.now = new Date(y, m, d)
         }
-        this.now = new Date(y, m - 1, d)
 
     // this : このインスタンス
     //　イベント呼び出しの場合、イベントが発生したオブジェクトを示す
