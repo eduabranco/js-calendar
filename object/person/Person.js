@@ -8,6 +8,7 @@
 class Person {
     #name
     #height
+    #gender
 
     // Getter and setter for name
     get name () {
@@ -21,6 +22,12 @@ class Person {
     }
     set height (arg) {
         this.#height = arg
+    } 
+    get gender () {
+        return this.#gender
+    }
+    set gender (arg) {
+        this.#gender = arg
     } 
 
     // コンストラクタを定義する
@@ -37,7 +44,6 @@ class Person {
     }
     // this : このインスタンス
     //　イベント呼び出しの場合、イベントが発生したオブジェクトを示す
-    }
     /**
      * Print the current person.
      * 
@@ -65,4 +71,5 @@ class Person {
         
         console.log(result)
         return result
+    }
 }
