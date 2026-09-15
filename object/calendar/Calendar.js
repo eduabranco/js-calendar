@@ -6,6 +6,7 @@
 
 // Calendar class
 class Calendar {
+    static msg = "Hello,World!"
     fieldVal = 10
     // プライベートフィルド変数
     #now
@@ -31,9 +32,9 @@ class Calendar {
     constructor(y, m, d) {
         // Initialize the calendar
         if (y === undefined || m === undefined || d === undefined) {
-            this.now = new Date()
+            this.#now = new Date()
         }else{
-            this.now = new Date(y, m, d)
+            this.#now = new Date(y, m, d)
         }
 
     // this : このインスタンス
