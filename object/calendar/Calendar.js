@@ -7,7 +7,21 @@
 // Calendar class
 class Calendar {
     fieldVal = 10
-    /** 
+    // プライベートフィルド変数
+    #now
+    // プライベートフィルド変数のゲッターとセッターを定義する
+    get now () {
+        return this.#now
+    }
+    // プライベートフィルド変数のゲッターとセッターを定義する
+    set now (arg) {
+        // 引数がDate型であることを確認する
+        if (arg !== undefined && arg.constructor.name === "Date") {
+            this.#now = arg
+        }
+    } 
+    // コンストラクタを定義する
+    /**
      * 
      * @param {int} y
      * @param {int} m
@@ -44,11 +58,11 @@ class Calendar {
         //    padChara=""
         //}
 
-        let result = this.now.getFullYear()
-        //result += "/"+ String((this.now.getMonth()+1)).padStart(2, padChara)
-        //result += "/"+ String(this.now.getDate()).padStart(2, padChara)
-        result += "/"+ String((this.now.getMonth()+1)).padStart(2, pad)
-        result += "/"+ String(this.now.getDate()).padStart(2, pad)
+        let result = this.#now.getFullYear()
+        //result += "/"+ String((this.#now.getMonth()+1)).padStart(2, padChara)
+        //result += "/"+ String(this.#now.getDate()).padStart(2, padChara)
+        result += "/"+ String((this.#now.getMonth()+1)).padStart(2, pad)
+        result += "/"+ String(this.#now.getDate()).padStart(2, pad)
         
         console.log(result)
         return result
