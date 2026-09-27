@@ -1,0 +1,11 @@
+body {
+    font-family: "Hiragino Sans", "Yu Gothic", Arial, sans-serif;
+    margin: 24px;
+    background: #f5f6f8;
+    color: #222;
+}
+
+h1 {
+    font-size: 1.4rem;
+    margin-bottom: 24px;
+}
