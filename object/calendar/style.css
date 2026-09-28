@@ -25,3 +25,11 @@ body{
 .calendar table{
     border-collapse: collapse;
 }
+
+.calendar {
+    td,
+    th{
+    width: 1.8em;
+    padding: 0.1em;
+    }
+}

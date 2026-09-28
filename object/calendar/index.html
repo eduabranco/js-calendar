@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <section id="template" class="Calendar"> 
+  <section id="template" class="calendar"> 
     <h2>カレンダーテ  ンプレート</h2>
     <table >
       <caption><span class="month">9</span>月のカレンダー</caption>
@@ -49,6 +49,10 @@
       </tbody>
     </table>
   </section>
+  <section id="actual"></section> 
   <script src="Calendar.js"></script>
+  <script>
+    const cal = new Calendar('actual');
+  </script>
 </body>
 </html>

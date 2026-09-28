@@ -24,19 +24,34 @@ class Calendar {
     // コンストラクタを定義する
     /**
      * 
+     * @param {string} id - HTMLのid属性値
      * @param {int} y
      * @param {int} m
      * @param {int} d
      */
     // Constructor
-    constructor(y, m, d) {
+    constructor(id='cal',y, m, d) {
         // Initialize the calendar
         if (y === undefined || m === undefined || d === undefined) {
             this.#now = new Date()
         }else{
             this.#now = new Date(y, m, d)
         }
-
+        this.element=document.getElementById(id)
+        const table = documentoo.createElement('table')
+        const caption = document.createElement('caption')
+        caption.appendChild(
+            document.createElement('span').classList.add('month'))
+        const thead = document.createElement('thead')
+        const tfoot = document.createElement('tfoot')
+        const tbody = document.createElement('tbody')
+        table.appendChild(caption)
+        table.appendChild(thead)
+        table.appendChild(tfoot)
+        table.appendChild(tbody)
+        this.element.appendChild(table)
+        //対象となるエレメントを取得する（？）
+        //this.element.querySelector('table')
     // this : このインスタンス
     //　イベント呼び出しの場合、イベントが発生したオブジェクトを示す
     }
