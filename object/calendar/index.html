@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <section id="template" class="Calendar"> 
-    <h2>カレンダーテンプレート</h2>
-    <table>
+    <h2>カレンダーテ  ンプレート</h2>
+    <table >
       <caption><span class="month">9</span>月のカレンダー</caption>
       <thead>
         <tr>
@@ -21,13 +22,33 @@
           <th class="day sat">土</th>
         </tr>
       </thead>
-      <tfoot></tfoot>
+      <tfoot>
+        <tr>
+          <td colspan="7">ここはtfootです&lt; &gt;Jhon&nbsp;Doe</td>
+        </tr>
+      </tfoot>
       <tbody>
+        <tr>
+          <td class="day sun">&nbsp;</td>
+          <td class="day"> &nbsp;</td>
+          <td class="day">1</td>
+          <td class="day">2</td>
+          <td class="day">3</td>
+          <td class="day">4</td>
+          <td class="day sat">5</td>
+        </tr>
+        <tr>
+          <td class="day sun">6</td>
+          <td class="day today">7</td>
+          <td class="day">8</td>
+          <td class="day">9</td>
+          <td class="day">10</td>
+          <td class="day">11</td>
+          <td class="day sat">12</td>
+        </tr>
       </tbody>
     </table>
   </section>
-  
-  <p>現在の日付: <span id="currentDate"></span></p>
   <script src="Calendar.js"></script>
 </body>
 </html>
