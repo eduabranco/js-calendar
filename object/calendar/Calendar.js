@@ -83,10 +83,13 @@ class Calendar {
         while(this.month === day.getMonth()) {
             //console.log(day)
             const wd = day.getDay() // 曜日を取得する
-            days[wd].textContent = day.getDate() // 日付をセットする
+            days[wd].textContent = day.getDate()
+            
+            // 日付をセットする
             if (day.getTime() === today.getTime()) {
                 days[wd].classList.add('today') // 本日の日付にクラスを追加する
             }
+            
             // 週末の場合、次の週を。。。
             if (wd === 6) { // 土曜日なら
                 // 週の行を追加する

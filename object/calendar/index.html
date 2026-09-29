@@ -49,8 +49,8 @@
       </tbody>
     </table>
   </section>
-  <div id="template">
-    <template id="cal_body" class="calendar">
+    <template id="cal_body">
+      <div class="calendar">
       <h2 class="title"></h2>
       <table >
       <caption><span class="month">9</span>月のカレンダー</caption>
@@ -72,23 +72,25 @@
       </tfoot>
       <tbody></tbody>
     </table>
+      </div>
     </template>
     <template id="cal_row">
         <tr>
           <td class="day sun"><span></span></td>
-          <td class="day today"><span></span></td>
+          <td class="day"><span></span></td>
           <td class="day"><span></span></td>
           <td class="day"><span></span></td>
           <td class="day"><span></span></td>
           <td class="day"><span></span></td>
           <td class="day sat"><span></span></td>
         </tr>
+        
     </template>
   </div>
   <section id="actual"></section> 
   <script src="Calendar.js"></script>
   <script>
-    const cal = new Calendar('actual');
+  const cal = new Calendar('actual');
   </script>
 </body>
 </html>
