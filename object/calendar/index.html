@@ -51,10 +51,37 @@
   </section>
   <div id="template">
     <template id="cal_body" class="calendar">
-
+          <table >
+      <caption><span class="month">9</span>月のカレンダー</caption>
+      <thead>
+        <tr>
+          <th class="day sun">日</th>
+          <th class="day mon">月</th>
+          <th class="day tue">火</th>
+          <th class="day wed">水</th>
+          <th class="day thu">木</th>
+          <th class="day fri">金</th>
+          <th class="day sat">土</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <td colspan="7"></td>
+        </tr>
+      </tfoot>
+      <tbody></tbody>
+    </table>
     </template>
     <template id="cal_row">
-      
+        <tr>
+          <td class="day sun"><span></span></td>
+          <td class="day today"><span></span></td>
+          <td class="day"><span></span></td>
+          <td class="day"><span></span></td>
+          <td class="day"><span></span></td>
+          <td class="day"><span></span></td>
+          <td class="day sat"><span></span></td>
+        </tr>
     </template>
   </div>
   <section id="actual"></section> 
