@@ -40,8 +40,12 @@ class Calendar {
         this.element=document.getElementById(id)
         const table = documentoo.createElement('table')
         const caption = document.createElement('caption')
-        caption.appendChild(
-            document.createElement('span').classList.add('month'))
+        //caption.appendChild(
+        //    document.createElement('span').classList.add('month'))
+        //this.element.querySelector('table')
+        const span = document.createElement('span')
+        span.classList.add('month')
+        caption.appendChild(span)
         const thead = document.createElement('thead')
         const tfoot = document.createElement('tfoot')
         const tbody = document.createElement('tbody')
