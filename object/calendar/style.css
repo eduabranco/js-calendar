@@ -1,27 +1,27 @@
 @charset "utf-8";
 
-html{
+html {
     font-size: 16pt;
 }
 
-*{
+* {
     /* border:0.05em solid black; */
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
 }
 
-section:has(.prototype){
+section:has(.prototype) {
     position: relative;
 }
 
-.prototype::before{
-    content:"PROTOTYPE";
+.prototype::before {
+    content: "PROTOTYPE";
     font-size: 2em;
-    color:rgba(255,255,0,0.6);
-    transform: translate(-50%,-50%) rotate(340deg);
+    color: rgba(255, 255, 0, 0.6);
+    transform: translate(-50%, -50%) rotate(340deg);
     display: block;
     position: absolute;
     top: 50%;
@@ -31,51 +31,62 @@ section:has(.prototype){
     font-weight: bold;
 }
 
-.calendar{
-    margin:1em;
+.calendar {
+    margin: 1em;
     padding: 0.2em 0.4em;
     font-size: 1.2em;
     width: max-content;
 
     border-radius: 0.2em;
-    box-shadow: 0.1em 0.1em 0.3em rgba(0,0,0,0.2);
-    }
+    box-shadow: 0.1em 0.1em 0.3em rgba(0, 0, 0, 0.2);
+}
 
-.calendar h2{
+.calendar h2 {
     font-size: 1.2em;
     margin: 0;
     width: max-content;
 }
 
-.calendar table{
+.calendar table {
     border-collapse: collapse;
     margin: 0.2em auto;
 }
 
-.calendar caption{
+.calendar caption {
     font-size: 1.4em;
 }
+
 .calendar {
+
     td,
-    th{
-    width: 1.8em;
-    padding: 0.1em;
+    th {
+        width: 1.8em;
+        padding: 0.1em;
     }
 
-    tbody td{
+    tbody td {
         text-align: right;
     }
 
     .today {
-        background-color: rgba(255,255,0,1);
+        background-color: rgba(255, 255, 0, 1);
         font-weight: bold;
     }
-    
-    .sat{
+
+    .sat {
         color: blue;
     }
 
-    .sun{
+    .sun {
         color: red;
     }
+}
+
+.calendar .title {
+    text-align: center;
+    width: auto;
+}
+
+.remark {
+    text-align: center;
 }

@@ -10,7 +10,7 @@
 class Calendar {
     year = 0
     month = 0
-    
+
     // テンプレート
     #cal_body
     #cal_row
@@ -40,11 +40,11 @@ class Calendar {
      * @param {number} y - 年
      * @param {number} m - 月
      */
-    constructor(id='cal', y, m) {
+    constructor(id = 'cal', y, m) {
         if (y && m) {
             this.year = y
-            this.month = m
-        } 
+            this.month = m - 1
+        }
         else {
             const now = new Date()
             this.year = now.getFullYear()
@@ -71,25 +71,25 @@ class Calendar {
 
         cal_body.querySelector('.title').textContent = this.#title;
         cal_body.querySelector('.remark').textContent = this.#remark;
-        cal_body.querySelector('.month').textContent =this.month + 1;
+        cal_body.querySelector('.month').textContent = this.month + 1;
 
         // 
         let week = cal_row.cloneNode(true)
         let days = week.querySelectorAll('td > span')
-        
+
         // 1ヶ月の繰り返し処理
         // 月の最初の日付を取得する
         const day = new Date(this.year, this.month, 1)
-        while(this.month === day.getMonth()) {
+        while (this.month === day.getMonth()) {
             //console.log(day)
             const wd = day.getDay() // 曜日を取得する
             days[wd].textContent = day.getDate()
-            
+
             // 日付をセットする
             if (day.getTime() === today.getTime()) {
                 days[wd].classList.add('today') // 本日の日付にクラスを追加する
             }
-            
+
             // 週末の場合、次の週を。。。
             if (wd === 6) { // 土曜日なら
                 // 週の行を追加する
@@ -100,6 +100,7 @@ class Calendar {
             // 次の日へめる
             day.setDate(day.getDate() + 1)
         }
+        // 最後の週を追加する
         if (day.getDay() !== 0) {
             cal_body.querySelector('tbody').appendChild(week)
         }

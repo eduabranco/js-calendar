@@ -11,16 +11,16 @@ class Calendar {
     // プライベートフィルド変数
     #now
     // プライベートフィルド変数のゲッターとセッターを定義する
-    get now () {
+    get now() {
         return this.#now
     }
     // プライベートフィルド変数のゲッターとセッターを定義する
-    set now (arg) {
+    set now(arg) {
         // 引数がDate型であることを確認する
         if (arg !== undefined && arg.constructor.name === "Date") {
             this.#now = arg
         }
-    } 
+    }
     // コンストラクタを定義する
     /**
      * 
@@ -30,14 +30,14 @@ class Calendar {
      * @param {int} d
      */
     // Constructor
-    constructor(id='cal',y, m, d) {
+    constructor(id = 'cal', y, m, d) {
         // Initialize the calendar
         if (y === undefined || m === undefined || d === undefined) {
             this.#now = new Date()
-        }else{
+        } else {
             this.#now = new Date(y, m, d)
         }
-        this.element=document.getElementById(id)
+        this.element = document.getElementById(id)
         const table = documentoo.createElement('table')
         const caption = document.createElement('caption')
         //caption.appendChild(
@@ -56,8 +56,8 @@ class Calendar {
         this.element.appendChild(table)
         //対象となるエレメントを取得する（？）
         //this.element.querySelector('table')
-    // this : このインスタンス
-    //　イベント呼び出しの場合、イベントが発生したオブジェクトを示す
+        // this : このインスタンス
+        //　イベント呼び出しの場合、イベントが発生したオブジェクトを示す
     }
     /**
      * Print the current date.
@@ -68,7 +68,7 @@ class Calendar {
      */
     // Print the current date
 
-    print(pad='') {
+    print(pad = '') {
         //let d = new Date()　
         //console.log(d)
         //let padChara
@@ -81,9 +81,9 @@ class Calendar {
         let result = this.#now.getFullYear()
         //result += "/"+ String((this.#now.getMonth()+1)).padStart(2, padChara)
         //result += "/"+ String(this.#now.getDate()).padStart(2, padChara)
-        result += "/"+ String((this.#now.getMonth()+1)).padStart(2, pad)
-        result += "/"+ String(this.#now.getDate()).padStart(2, pad)
-        
+        result += "/" + String((this.#now.getMonth() + 1)).padStart(2, pad)
+        result += "/" + String(this.#now.getDate()).padStart(2, pad)
+
         console.log(result)
         return result
     }
