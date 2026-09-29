@@ -9,7 +9,7 @@
 <body>
   <section id="template" class="calendar"> 
     <h2>カレンダーテ  ンプレート</h2>
-    <table >
+    <table class="prototype">
       <caption><span class="month">9</span>月のカレンダー</caption>
       <thead>
         <tr>
@@ -86,11 +86,13 @@
         </tr>
         
     </template>
-  </div>
   <section id="actual"></section> 
   <script src="Calendar.js"></script>
   <script>
-  const cal = new Calendar('actual');
+    const cal = new Calendar('actual');
+    cal.title = 'title';
+    cal.remark = 'remark';
+    cal.render();
   </script>
 </body>
 </html>

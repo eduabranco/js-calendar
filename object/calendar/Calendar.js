@@ -71,7 +71,7 @@ class Calendar {
 
         cal_body.querySelector('.title').textContent = this.#title;
         cal_body.querySelector('.remark').textContent = this.#remark;
-        cal_body.querySelector('.month').textContent =this.month+1;
+        cal_body.querySelector('.month').textContent =this.month + 1;
 
         // 
         let week = cal_row.cloneNode(true)
@@ -100,7 +100,9 @@ class Calendar {
             // 次の日へめる
             day.setDate(day.getDate() + 1)
         }
-        cal_body.querySelector('tbody').appendChild(week) // 最後の週を追加する
+        if (day.getDay() !== 0) {
+            cal_body.querySelector('tbody').appendChild(week)
+        }
 
         // kannseishita te-buru wo #actual ni settei suru
         if (this.element) {

@@ -49,7 +49,7 @@ section:has(.prototype){
 
 .calendar table{
     border-collapse: collapse;
-    max-width: 0.2em auto;
+    margin: 0.2em auto;
 }
 
 .calendar caption{
